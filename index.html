@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Brand</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="base.css" />       <!-- 変数・リセット・共通ボタン -->
+  <link rel="stylesheet" href="loader.css" />     <!-- ローディング画面 -->
+  <link rel="stylesheet" href="nav.css" />        <!-- ナビゲーション・ハンバーガー -->
+  <link rel="stylesheet" href="hero.css" />       <!-- ヒーロー・マーキー・カウントダウン -->
+  <link rel="stylesheet" href="sections.css" />   <!-- About・Services セクション -->
+  <link rel="stylesheet" href="animation.css" />  <!-- Canvasアニメーション -->
+</head>
+<body>
+
+  <!-- ============================================================
+       LOADER
+       ============================================================ -->
+  <div id="loader">
+    <div id="loader-brand">
+      <div id="loader-brand-logo"><img src="caligraphy002.png" alt="Brand Logo" style="height: clamp(120px, 18vw, 240px); width: auto; max-width: 800px;"></div>
+      <div id="loader-brand-line"></div>
+      <div id="loader-brand-sub">Est. 2025 · Azabu</div>
+    </div>
+    <div id="loader-progress"></div>
+  </div>
+
+  <!-- ============================================================
+       NAV
+       ============================================================ -->
+  <nav id="navbar">
+    <div class="nav-logo">
+      <img id="nav-logo-img" src="caligraphy002.png" alt="Brand Logo" style="display: block; height: clamp(60px, 8vw, 80px); width: auto; max-width: 400px; object-fit: contain;" />
+    </div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Activity</a></li>
+      <li><a href="https://www.instagram.com/uma79740/" target="_blank" rel="noopener">Social</a></li>
+    </ul>
+    <a href="#services" class="nav-cta">Get Started</a>
+    <div class="hamburger" id="hamburger" aria-label="メニューを開く" role="button" tabindex="0">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about" class="mobile-link">About</a>
+    <a href="#services" class="mobile-link">Activity</a>
+    <a href="https://www.instagram.com/uma79740/" target="_blank" rel="noopener" class="mobile-link">Social</a>
+  </div>
+
+  <!-- ============================================================
+       HERO
+       ============================================================ -->
+  <div class="hero-sticky-wrap">
+    <div class="hero-progress-bar" id="heroProgressBar">
+      <div class="hero-progress-fill" id="heroProgressFill"></div>
+    </div>
+    <section class="hero" id="heroSection">
+      <div class="hero-bg" id="heroBg"></div>
+      <div class="hero-counter" id="heroCounter">
+        <div class="hero-counter-num-wrap" id="counterWrap">
+          <!-- digit slots injected by JS -->
+          <span class="hero-counter-unit">日</span>
+        </div>
+        <div class="hero-counter-label" id="counterLabel">COUNTDOWN</div>
+      </div>
+      <div class="hero-content">
+        <p class="hero-label" id="heroLabel">Welcome to Azabu Economic Exhibition</p>
+        <h1>
+          <span class="line-wrap"><span class="line-inner" id="heroLine0">ここに、好きな</span></span>
+          <span class="line-wrap"><span class="line-inner" id="heroLine1"><em>スローガンとか</em></span></span>
+          <span class="line-wrap"><span class="line-inner" id="heroLine2" style="color:#f5e6d3;">入れてね♡</span></span>
+        </h1>
+        <p class="hero-sub" id="heroSub">細かいテキストとかはここに挿入</p>
+        <div class="hero-actions" id="heroActions">
+          <a href="https://www.instagram.com/uma79740/" class="btn-primary">Social</a>
+          <a href="#about" class="btn-ghost">Learn More <svg width="18" height="14" viewBox="0 0 18 14" fill="none"><path d="M1 7h16M11 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg></a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ============================================================
+       MARQUEE
+       ============================================================ -->
+  <div class="marquee-strip">
+    <div class="marquee-track">
+      <span class="marquee-item"><span class="dot"></span>Text1</span>
+      <span class="marquee-item"><span class="dot"></span>Text2</span>
+      <span class="marquee-item"><span class="dot"></span>Text3</span>
+      <span class="marquee-item"><span class="dot"></span>Text4</span>
+      <span class="marquee-item"><span class="dot"></span>Text5</span>
+      <span class="marquee-item"><span class="dot"></span>Text6</span>
+      <span class="marquee-item"><span class="dot"></span>Text7</span>
+      <span class="marquee-item"><span class="dot"></span>Text8</span>
+      <span class="marquee-item"><span class="dot"></span>Text9</span>
+      <span class="marquee-item"><span class="dot"></span>Text10</span>
+      <span class="marquee-item"><span class="dot"></span>Text11</span>
+      <span class="marquee-item"><span class="dot"></span>Text12</span>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       ABOUT
+       ============================================================ -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image reveal">
+          <img src="tokyo.jpg" alt="About us" />
+          <p class="about-image-caption">Our Studio, Azabu — Est. 2025</p>
+        </div>
+        <div class="about-body reveal">
+          <p class="section-label">About Us</p>
+          <h2 class="section-title" style="margin-bottom:32px;">ここら辺は<br/><em>紹介</em> 文とか</h2>
+          <p>長文入れていい感じにしといてください。多分おそらく麻布経済展の紹介とか歴史とか入れればいい感じになると思う。</p>
+          <p>あと、上の写真は本当に適当だから活動の様子とかに変えるといいと思う。頼まれたらいい感じに写真編集するからお願いします。あと一番上の写真はテキストが被らないようになってるから新しい写真にするんだったらそこも考える必要がある。</p>
+          <div class="about-stats">
+            <div><div class="stat-num">123</div><div class="stat-label">数字のバナーが</div></div>
+            <div><div class="stat-num">356</div><div class="stat-label">綺麗だったから</div></div>
+            <div><div class="stat-num">99%</div><div class="stat-label">適当に入れてみた</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SERVICES
+       ============================================================ -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="services-header reveal">
+        <div>
+          <p class="section-label">What We Do</p>
+          <h2 class="section-title">Our <em>Activities</em></h2>
+        </div>
+        <a href="#contact" class="btn-ghost">All Activities <svg width="18" height="14" viewBox="0 0 18 14" fill="none"><path d="M1 7h16M11 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg></a>
+      </div>
+      <div class="services-grid reveal">
+        <div class="service-card"><p class="service-num">01</p><h3 class="service-name">1</h3><p class="service-desc">ここのマスは好きなように使ってください。</p></div>
+        <div class="service-card"><p class="service-num">02</p><h3 class="service-name">2</h3><p class="service-desc">ここのマスは好きなように使ってください。</p></div>
+        <div class="service-card"><p class="service-num">03</p><h3 class="service-name">3</h3><p class="service-desc">ここのマスは好きなように使ってください。</p></div>
+        <div class="service-card"><p class="service-num">04</p><h3 class="service-name">4</h3><p class="service-desc">ここのマスは好きなように使ってください。</p></div>
+        <div class="service-card"><p class="service-num">05</p><h3 class="service-name">5</h3><p class="service-desc">ここのマスは好きなように使ってください。</p></div>
+        <div class="service-card"><p class="service-num">06</p><h3 class="service-name">6</h3><p class="service-desc">ここのマスは好きなように使ってください。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ECONOMIC ANIMATION
+       ============================================================ -->
+  <section class="economic-animation">
+    <div class="animation-container">
+      <canvas id="economicCanvas"></canvas>
+      <div class="overlay-text">
+        <h2 class="dynamic-title">スローガン<span class="highlight">とか入れといて！</span></h2>
+        <p class="dynamic-subtitle">細かいテキストここ</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer style="
+    background: #ffffff6e;
+    color: #333;
+    padding: clamp(48px, 6vw, 80px) var(--gutter);
+    font-family: var(--font-body);
+    font-size: 13px;
+    letter-spacing: 0.06em;
+  ">
+    <div style="max-width: var(--max-w); margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 40px;">
+      <div>
+        <img src="caligraphy002.png" alt="Brand Logo" style="height: 48px; width: auto; object-fit: contain; opacity: 0.8; margin-bottom: 16px;" />
+        <p style="font-size: 11px; letter-spacing: 0.16em; color: #666;">Est. 2025 · Azabu</p>
+      </div>
+      <div style="display: flex; gap: clamp(32px, 6vw, 80px); flex-wrap: wrap;">
+        <div>
+          <p style="font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--color-accent); margin-bottom: 16px;">Navigation</p>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px;">
+            <li><a href="#about" style="color: #555; transition: color 0.3s;" onmouseover="this.style.color='var(--color-accent)'" onmouseout="this.style.color='#555'">About</a></li>
+            <li><a href="#services" style="color: #555; transition: color 0.3s;" onmouseover="this.style.color='var(--color-accent)'" onmouseout="this.style.color='#555'">Activity</a></li>
+          </ul>
+        </div>
+        <div>
+          <p style="font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--color-accent); margin-bottom: 16px;">Follow</p>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px;">
+            <li><a href="https://www.instagram.com/uma79740/" target="_blank" rel="noopener" style="color: #555; transition: color 0.3s;" onmouseover="this.style.color='var(--color-accent)'" onmouseout="this.style.color='#555'">Instagram</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div style="max-width: var(--max-w); margin: 40px auto 0; padding-top: 32px; border-top: 1px solid rgba(0,0,0,0.08); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: 11px; letter-spacing: 0.1em; color: #999;">
+      <span>© 2025 Azabu Economic Exhibition. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <!-- JavaScript（bodyの末尾で読み込む） -->
+  <script src="loader.js"></script>     <!-- ローディング画面 -->
+  <script src="nav.js"></script>        <!-- ナビ・ハンバーガー -->
+  <script src="hero.js"></script>       <!-- ヒーロー パララックス -->
+  <script src="countdown.js"></script>  <!-- カウントダウン -->
+  <script src="reveal.js"></script>     <!-- スクロール表示 -->
+  <script src="animation.js"></script>  <!-- Canvasアニメーション -->
+</body>
+</html>
